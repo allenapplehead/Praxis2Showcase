@@ -76,9 +76,9 @@ void loop()
         BTserial.write("LED is Off \r\n");
       }
       else if (lastChar == '1') {
-        Myservo1.write(39); //D string
+        Myservo1.write(38); // Unpress D string
       } else if (lastChar == '2') {
-        Myservo2.write(130);//A string
+        Myservo2.write(130);// Unpress A string
       }
       else  {
         Serial.write("Wrong Command");
@@ -91,22 +91,4 @@ void loop()
     BTserial.write(Serial.read());
   }
 
-  
-
-/*
-  if (digitalRead(4)==HIGH) {
-    Myservo1.write(62); //D string
-  } else if (digitalRead(4)==LOW) {
-    Myservo1.write(39); //D string
-  }
-  
-  if(digitalRead(8)==HIGH){
-    Myservo2.write(110); //A string
-    Serial.println("foo");
-  }
-  else if (digitalRead(8)==LOW) {
-    Myservo2.write(130);//A string
-    Serial.println("bar");
-  }
-  */
 }
